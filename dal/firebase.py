@@ -13,7 +13,10 @@ class Firebase:
             'storageBucket': envs('FB_ST_BUCKET'),
             'messagingSenderId': envs('FB_MSS_SND_ID'),
             'projectId': envs('FB_PROJ_ID'),
-            'serviceAccount': envs('FB_SERVICE_PK_PATH'),
+            'credential': {
+                'private_key': envs('FB_CREDENTIALS_PK'),
+                'client_email': envs('FB_CREDENTIALS_EMAIL'),
+            },
         }
         firebase = pyrebase.initialize_app(config)
 

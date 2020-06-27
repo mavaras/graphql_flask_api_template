@@ -1,3 +1,4 @@
+import os
 import json
 
 from flask import Flask
@@ -10,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def entrypoint():
-    return 'GraphQL API entrypoint'
+    return '<h1>GraphQL API entrypoint</h1>'
 
 app.add_url_rule(
     '/api',
@@ -18,4 +19,4 @@ app.add_url_rule(
 )
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8080, debug=True)
+    app.run()
