@@ -44,4 +44,4 @@ class PicturesQuery(ObjectType):
                                author=picture.get('author', ''))
 
 
-SCHEMA = Schema(query=PicturesQuery, types=[TodayPicture])
+SCHEMA = Schema(query=PicturesQuery, types=[])
